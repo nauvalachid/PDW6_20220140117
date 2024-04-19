@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Penyesuaian untuk video latar belakang */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hindari scroll saat menggunakan latar belakang video */
+    position: relative; /* Perlu untuk penempatan video */
+}
+
+/* Gaya untuk kontainer video */
+#bg-video {
+    position: fixed; /* Mengunci posisi relatif terhadap jendela browser */
+    top: 0;
+    left: 0;
+    width: 110%; /* Lebar video mengisi seluruh lebar jendela */
+    height: 110%; /* Tinggi video mengisi seluruh tinggi jendela */
+    object-fit: cover; /* Memastikan video diposisikan dengan baik */
+    z-index: -1; /* Mendorong video ke belakang agar teks dan elemen lainnya di atasnya */
+}
+
+
+
+.container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.player-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.player-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+
+.player-img img:hover {
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
+}
+
+h2, h3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.player-progress {
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 8px;
+}
+
+.progress {
+    background-color: #212121;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.music-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fa-solid {
+    font-size: 32px;
+    color: #2f0404;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fa-solid:hover {
+    filter: brightness(70%);
+}
+
+.play-button {
+    font-size: 44px;
+    margin: 0 20px;
+    color: #2f0404;
+}
+
+.progress {
+    background-color: #212121;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+    /* Efek glowing menggunakan box-shadow */
+    box-shadow: 0 0 10px 5px #fff, /* Putih */
+                0 0 50px 25px #ff0000; /* Merah */
+}
+
+h2 {
+    color: #2f0404; /* Putih */
+}
+
+p {
+    color: #2f0404; /* Putih */
+}
